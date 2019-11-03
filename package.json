@@ -1,6 +1,6 @@
 {
   "name": "@choujiaojiao/vue-countdown",
-  "version": "0.2.1",
+  "version": "0.1.0",
   "private": false,
   "author": "choujiaojiao <gassnake999@gmail.com>",
   "license": "MIT",
@@ -12,7 +12,7 @@
   ],
   "files": [
     "dist",
-    "src"
+    "packages"
   ],
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "build-lib": "vue-cli-service build --target lib --name Countdown ./src/packages/index.ts"
+    "build-lib": "vue-cli-service build --target lib --name Countdown ./packages/index.ts"
   },
   "dependencies": {
     "core-js": "^3.3.2",

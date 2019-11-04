@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-countdown
 
 ## Project setup
@@ -32,3 +33,6 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# @choujiaojiao/vue-countdown
+>>>>>>> a0cfac7e62574ea2a2f1249915adfa20d6a6dc1d

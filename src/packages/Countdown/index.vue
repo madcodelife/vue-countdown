@@ -15,6 +15,11 @@ export default class Countdown extends Vue {
 
   @Prop({ default: 1, type: Number }) step!: number // 步长
 
+<<<<<<< HEAD
+=======
+  @Prop({ type: Boolean }) switch!: boolean // 开关
+
+>>>>>>> a0cfac7e62574ea2a2f1249915adfa20d6a6dc1d
   private timeDiff: number = 0 // 倒计时
 
   private timer: any = null // 时间函数
@@ -24,7 +29,11 @@ export default class Countdown extends Vue {
     return this.step * 1000
   }
 
+<<<<<<< HEAD
   @Watch('time', { immediate: true })
+=======
+  @Watch('switch', { immediate: true })
+>>>>>>> a0cfac7e62574ea2a2f1249915adfa20d6a6dc1d
   onCountdownSwitch(val: boolean) {
     if (val && !this.timer) {
       this.timeDiff = this.time

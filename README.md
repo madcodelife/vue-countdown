@@ -26,8 +26,8 @@ npm install vue-countdown
 
 ```vue
 <template>
-  <Countdown :time="3666" format="hh:mm:ss" @on-end="onCountdownEnd">
-    <template slot-scope="{ time }">{{ time }}</template>
+	<Countdown :time="3666" format="hh:mm:ss" @on-end="onCountdownEnd">
+		<template slot-scope="{ time }">{{ time }}</template>
 	</Countdown>
 </template>
 

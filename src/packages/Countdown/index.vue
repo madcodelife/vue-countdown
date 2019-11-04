@@ -1,6 +1,7 @@
 <template>
   <div class="countdown">
-    <slot :time="timeDiff"></slot>
+    <slot v-if="format" :time="formatCountdown(timeDiff)"></slot>
+    <slot v-else :time="timeDiff"></slot>
   </div>
 </template>
 
@@ -15,11 +16,10 @@ export default class Countdown extends Vue {
 
   @Prop({ default: 1, type: Number }) step!: number // 步长
 
-<<<<<<< HEAD
-=======
-  @Prop({ type: Boolean }) switch!: boolean // 开关
+  @Prop({ default: null, type: Boolean }) switch!: any // 步长
 
->>>>>>> a0cfac7e62574ea2a2f1249915adfa20d6a6dc1d
+  @Prop({ type: String }) format!: string // 格式化
+
   private timeDiff: number = 0 // 倒计时
 
   private timer: any = null // 时间函数
@@ -29,14 +29,29 @@ export default class Countdown extends Vue {
     return this.step * 1000
   }
 
-<<<<<<< HEAD
   @Watch('time', { immediate: true })
-=======
-  @Watch('switch', { immediate: true })
->>>>>>> a0cfac7e62574ea2a2f1249915adfa20d6a6dc1d
-  onCountdownSwitch(val: boolean) {
+  private onTimeChange(val: number) {
+    this.timeDiff = val
+    const isSwitch = typeof this.switch === 'boolean'
     if (val && !this.timer) {
-      this.timeDiff = this.time
+      if (isSwitch) {
+        if (this.switch) {
+          this.triggerTimer()
+        } else {
+          this.clearTimer()
+        }
+      } else {
+        this.triggerTimer()
+      }
+    } else {
+      console.log('clear')
+      this.clearTimer()
+    }
+  }
+
+  @Watch('switch')
+  private onSwitchChange(val: boolean) {
+    if (val) {
       this.triggerTimer()
     } else {
       this.clearTimer()
@@ -48,7 +63,7 @@ export default class Countdown extends Vue {
   }
 
   // 清除定时器
-  clearTimer() {
+  private clearTimer() {
     if (this.timer) clearTimeout(this.timer)
   }
 
@@ -63,6 +78,42 @@ export default class Countdown extends Vue {
         this.triggerTimer()
       }
     }, this.computedStep)
+  }
+
+  // 格式化时间戳
+  private formatCountdown(timeDiff: number): string {
+    // 获取还剩多少小时
+    const hour = parseInt(((timeDiff as number) / 60 / 60).toString())
+    // 获取还剩多少分钟
+    let minute!: number
+    if (this.format.includes('hh') || this.format.includes('HH')) {
+      minute = parseInt((((timeDiff as number) / 60) % 60).toString())
+    } else {
+      minute = parseInt(((timeDiff as number) / 60).toString())
+    }
+    // 获取还剩多少秒
+    let second!: number
+    if (this.format.includes('mm') || this.format.includes('mm')) {
+      second = (timeDiff as number) % 60
+    } else {
+      second = timeDiff
+    }
+    let result = this.format
+    result = result.replace(/(hh|HH)/g, this.paddingZero(hour))
+    result = result.replace(/(mm|MM)/g, this.paddingZero(minute))
+    result = result.replace(/(ss|ss)/g, this.paddingZero(second))
+    return result
+  }
+
+  // 补零
+  private paddingZero(val: number): string {
+    if (val <= 0) {
+      return '00'
+    } else if (val < 10) {
+      return `0${val}`
+    } else {
+      return val.toString()
+    }
   }
 }
 </script>

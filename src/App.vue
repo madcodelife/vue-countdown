@@ -1,30 +1,17 @@
 <template>
   <div id="app">
-    <Countdown :time="time" @on-countdown="onCountdown" @on-end="onCountdownEnd">
-      <template slot-scope="{ time }">{{ time }}</template>
-    </Countdown>
+    <Sample></Sample>
   </div>
 </template>
 
 <script lang="ts">
-/* eslint-disable no-console */
 import { Component, Vue } from 'vue-property-decorator'
-import Countdown from './packages/Countdown/index.vue'
+import Sample from './sample/index.vue'
 
 @Component({
-  components: { Countdown }
+  components: { Sample }
 })
-export default class App extends Vue {
-  private time: number = 5
-
-  private onCountdownEnd() {
-    console.log('countdown end~')
-  }
-
-  private onCountdown(time: number) {
-    console.log(`countdowun: ${time}s`)
-  }
-}
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">
@@ -35,5 +22,19 @@ export default class App extends Vue {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(129, 216, 209);
+  transition: opacity 0.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+button {
+  cursor: pointer;
 }
 </style>

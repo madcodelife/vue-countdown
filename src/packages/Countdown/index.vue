@@ -45,7 +45,6 @@ export default class Countdown extends Vue {
         this.triggerTimer()
       }
     } else {
-      console.log('clear')
       this.clearTimer()
     }
   }

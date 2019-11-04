@@ -1,4 +1,4 @@
-# @choujiaojiao/vue-countdown⏰
+# @choujiaojiao/vue2-countdown⏰
 
 > vue倒计时插件
 
@@ -17,9 +17,9 @@ vue-countdown是一个无依赖项的轻量级vue组件，轻松实现倒计时�
 ### 如何使用
 
 ```bash
-yarn add vue-countdown
+yarn add @choujiaojiao/vue2-countdown
 or
-npm install vue-countdown
+npm install @choujiaojiao/vue2-countdown
 ```
 
 ### 例子
@@ -32,7 +32,7 @@ npm install vue-countdown
 </template>
 
 <script>
-  import Countdown from 'vue-count-to'
+  import Countdown from '@choujiaojiao/vue2-countdown'
   
   export default {
     components: { Countdown },

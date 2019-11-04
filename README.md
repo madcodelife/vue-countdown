@@ -12,7 +12,7 @@
 vue-countdown是一个无依赖项的轻量级vue组件，轻松实现倒计时需求，摆脱时间函数烦恼。
 支持SSR。
 
-## [Try the demo](http://panjiachen.github.io/countTo/demo/)
+## [Try the demo](https://gassnake999.github.io/vue-countdown/)
 
 ### 如何使用
 

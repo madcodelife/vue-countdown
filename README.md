@@ -56,7 +56,8 @@ npm install @choujiaojiao/vue2-countdown
 
 ### 方法
 
-| Function Name | Description    |
-| :-----------: | -------------- |
-|    on-end     | 倒计时结束回调 |
-| on-countdown  | 每次倒计时回调 |
+| Function Name | Description                                          |
+| :-----------: | ---------------------------------------------------- |
+|    on-end     | 倒计时结束回调                                       |
+| on-countdown  | 每次倒计时回调                                       |
+|  reCountdown  | 重新倒计时( ex: this.$refs.countdown.reCountdown() ) |

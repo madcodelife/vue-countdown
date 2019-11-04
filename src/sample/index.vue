@@ -15,7 +15,7 @@
     </Countdown>
     <br />
     <br />controllable:s
-    <Countdown :switch="countdownSwitch" :time="100" format="mm'ss''">
+    <Countdown ref="countdown" :switch="countdownSwitch" :time="100" format="mm'ss''">
       <template slot-scope="{ time }">{{ time }}</template>
     </Countdown>&emsp;
     <button @click="handleStart">start</button>&emsp;

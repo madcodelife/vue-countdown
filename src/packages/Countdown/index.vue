@@ -116,6 +116,11 @@ export default class Countdown extends Vue {
       return val.toString()
     }
   }
+
+  // 重新倒计时
+  private reCount() {
+    this.timeDiff = this.time
+  }
 }
 </script>
 

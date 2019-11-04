@@ -50,7 +50,7 @@ npm install @choujiaojiao/vue2-countdown
 | Property | Description                    |  type   | default |
 | -------- | ------------------------------ | :-----: | :-----: |
 | time     | 倒计时时间差（单位：秒）       | Number  |    0    |
-| step     | 多久执行一次倒计时（单位：秒） | Number  |   1s    |
+| step     | 多久执行一次倒计时（单位：秒） | Number  |    1    |
 | switch   | 倒计时开关                     | Boolean |   - -   |
 | format   | 格式化                         | String  |   - -   |
 

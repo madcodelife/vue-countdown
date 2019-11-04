@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>
-      <a href>vue-countdown⏰</a>
+      <a href="https://github.com/gassnake999/vue-countdown" target="_blank">vue-countdown⏰</a>
     </h1>
     <Countdown @on-countdown="onCountdown" @on-end="onCountdownEnd">
       <template slot-scope="{ time }">

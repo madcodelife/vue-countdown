@@ -14,7 +14,7 @@ vue-countdown是一个无依赖项的轻量级vue组件，轻松实现倒计时�
 
 ## [Try the demo](http://panjiachen.github.io/countTo/demo/)
 
-### 如何使用?
+### 如何使用
 
 ```bash
 yarn add vue-countdown
@@ -28,7 +28,7 @@ npm install vue-countdown
 <template>
   <Countdown :time="3666" format="hh:mm:ss" @on-end="onCountdownEnd">
     <template slot-scope="{ time }">{{ time }}</template>
-	</Countdown>
+  </Countdown>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ npm install vue-countdown
   
   export default {
     components: { Countdown },
-   	methods: {
+    methods: {
       onCountdownEnd() {
         console.log('countdown end~')
       }
@@ -46,6 +46,7 @@ npm install vue-countdown
 ```
 
 ### 属性
+
 | Property | Description                    |  type   | default |
 | -------- | ------------------------------ | :-----: | :-----: |
 | time     | 倒计时时间差（单位：秒）       | Number  |    0    |
@@ -54,6 +55,7 @@ npm install vue-countdown
 | format   | 格式化                         | String  |   - -   |
 
 ### 方法
+
 | Function Name | Description    |
 | :-----------: | -------------- |
 |    on-end     | 倒计时结束回调 |

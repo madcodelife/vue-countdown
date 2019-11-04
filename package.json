@@ -8,7 +8,9 @@
   "keywords": [
     "vue",
     "countdown",
-    "vue-countdown"
+    "vue-countdown",
+    "timer",
+    "countdown-timer"
   ],
   "files": [
     "dist",

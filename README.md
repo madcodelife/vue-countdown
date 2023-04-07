@@ -6,8 +6,8 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/gassnake999/vue-countdown)
 [![npm](https://img.shields.io/npm/v/@choujiaojiao/vue2-countdown.svg)](https://www.npmjs.com/package/@choujiaojiao/vue2-countdown)
 [![npm](https://img.shields.io/npm/dm/@choujiaojiao/vue2-countdown.svg)](https://npmcharts.com/compare/@choujiaojiao/vue2-countdown)
-[![minified](https://badgen.net/bundlephobia/min/@choujiaojiao/vue2-countdown)](https://bundlephobia.com/result?p=@choujiaojiao/vue2-countdown)
-[![gzip](https://badgen.net/bundlephobia/minzip/@choujiaojiao/vue2-countdown)](https://bundlephobia.com/result?p=@choujiaojiao/vue2-countdown)
+[![minified](https://img.shields.io/bundlephobia/min/@choujiaojiao/vue2-countdown)](https://bundlephobia.com/result?p=@choujiaojiao/vue2-countdown)
+[![gzip](https://img.shields.io/bundlephobia/minzip/@choujiaojiao/vue2-countdown)](https://bundlephobia.com/result?p=@choujiaojiao/vue2-countdown)
 
 vue2-countdown是一个无依赖项的轻量级vue组件，轻松实现倒计时需求，摆脱时间函数烦恼。
 支持SSR。
